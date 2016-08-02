@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>isdown</title>
+  <meta name="description" content="isdown">
+  <meta name="author" content="godwhoa">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="css/bulma.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        isdown
+      </h1>
+      <h2 class="subtitle">
+        Let's you test if a site is down.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-primary" style="display:none">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Site is up
+      </h1>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-danger" style="display:none">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Site is Down
+      </h1>
+    </div>
+  </div>
+</section>
+
+<div class="container" style="padding-top:10vh">
+  <div class="row">
+  <div class="column is-half">
+    <p class="control has-addons">
+      <input class="input column is-one-quater" type="text" placeholder="Site">
+      <a class="button is-info" id="isdown-btn">
+        Is it down
+      </a>
+    </p>
+    </div>
+  </div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
