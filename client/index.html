@@ -7,58 +7,22 @@
   <meta name="author" content="godwhoa">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="css/bulma.css">
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-
+  <!-- https://www.figma.com/file/G5Ggfgj2qznCJi42ROfCvTt5/isdown -->
 </head>
 <body>
-
-<section class="hero">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">
-        isdown
-      </h1>
-      <h2 class="subtitle">
-        Let's you test if a site is down.
-      </h2>
-    </div>
-  </div>
-</section>
-
-<section class="hero is-primary" style="display:none">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">
-        Site is up
-      </h1>
-    </div>
-  </div>
-</section>
-
-<section class="hero is-danger" style="display:none">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">
-        Site is Down
-      </h1>
-    </div>
-  </div>
-</section>
-
-<div class="container" style="padding-top:10vh">
-  <div class="row">
-  <div class="column is-half">
-    <p class="control has-addons">
-      <input class="input column is-one-quater" type="text" placeholder="Site">
-      <a class="button is-info" id="isdown-btn">
-        Is it down
-      </a>
-    </p>
-    </div>
-  </div>
+<div class="top-bar">
+  <a><span>is</span>down?</a>
+</div>
+<div class="input-container">
+  <input type="text"><div class="test-button"><a>Test!</a></div>
+</div>
+<div class="results-container">
+  <img src="img/loader.svg"><a>Minion 1 is testing...</a><br>
+  <img src="img/loader.svg"><a>Minion 2 is testing...</a><br>
+  <img src="img/loader.svg"><a>Minion 3 is testing...</a><br>
 </div>
 <script src="js/zepto.min.js"></script>
 <script src="js/script.js"></script>
