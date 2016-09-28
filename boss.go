@@ -44,6 +44,7 @@ func (b *Boss) List(w http.ResponseWriter, r *http.Request) {
 	} else {
 		fmt.Fprintf(w, string(list))
 	}
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 }
 
 /* Constructor */
@@ -65,6 +66,9 @@ func main() {
 
 	http.HandleFunc("/register", boss.Register)
 	http.HandleFunc("/list", boss.List)
+
+	home := http.FileServer(http.Dir("./client"))
+	http.Handle("/", home)
 
 	color.Green("Starting server on %s.", *mastersrv)
 	http.ListenAndServe(*mastersrv, nil)

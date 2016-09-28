@@ -53,11 +53,12 @@ func (m *Minion) Register() {
 }
 
 func (m *Minion) Health(w http.ResponseWriter, r *http.Request) {
-	color.Blue("heart beat")
+	// color.Blue("heart beat")
 	fmt.Fprintf(w, "alive")
 }
 
 func (m *Minion) Task(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	if r.Method == "POST" {
 		url := r.FormValue("url")
 		isdown := m.isDown(url)
