@@ -32,13 +32,40 @@
 
 .input-container > input[type="text"]{
 	/* Style */
-	width:27%;
+	width:25%;
 	font-size:34px;
 	font-family: 'Open Sans', sans-serif;
 	border: 3px solid #BCBCBC;
 	/* Pos. */
 	display: inline-block;
 	margin-top: 69px;
+}
+
+
+@media (min-width: 320px) {
+    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+	.input-container > input[type="text"]{
+		width:50%;
+	}
+}
+@media (min-width: 600px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+	.input-container > input[type="text"]{
+		width:45%;
+	}
+}
+
+@media (min-width: 1025px) {
+    /* big landscape tablets, laptops, and desktops */
+	.input-container > input[type="text"]{
+		width:30%;
+	}
+}
+@media (min-width: 1281px) {
+    /* hi-res laptops and desktops */
+	.input-container > input[type="text"]{
+		width:25%;
+	}
 }
 
 .input-container > input[type="text"]:focus{
