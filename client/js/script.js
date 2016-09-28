@@ -16,7 +16,7 @@ function ex_check_site(url,minion,testing_cb,down_cb,up_cb){
     $.post("http://"+minion+ '/isdown', {
         url: url
     }, function(res,status) {
-    	console.log(status,i)
+    	console.log(status)
         if (res == "false"){
         	up_cb(minion)
         	// console.log(minion,"site up!")
@@ -31,13 +31,13 @@ function ex_check_site(url,minion,testing_cb,down_cb,up_cb){
 // tcb: testing callback
 // dcb: down callback
 // ucb: up callback
-function check_site(url,tcb,dcb,ucb) {
+function check_site(url,testing_cb,down_cb,up_cb) {
     $.getJSON('/list',
         function(list) {
         	console.log(list)
             for (var i = 0; i < list.length; i++) {
                 var minion = list[i]
-                tcb(minion)
+                ex_check_site(url,minion,testing_cb,down_cb,up_cb)
             }
     });
 }
