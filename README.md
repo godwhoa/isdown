@@ -3,7 +3,6 @@ isdown
 
 A service that let's you test if a site is down.
 
-
 ## Architecture
 
 the architecture is all distributed. in-theory multiple people could host the "minion" nodes.
@@ -19,6 +18,16 @@ the architecture is all distributed. in-theory multiple people could host the "m
 + `/health` for master srv. to do health checks. (GET)
 + `/isdown` for sending in sites to test. (POST)
 
+
+### Client:
++ First fetches list of minion servers
++ Sends site to test to minions
++ Displays results
+
+## Screenshot
+![](http://i.imgur.com/HGaq6Hw.png "")
+
+
 ## TODO
 + ~~Make no assumption about which port minions run on~~
-+ Client
++ ~~Client~~
